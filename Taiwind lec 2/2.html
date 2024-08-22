@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+          tailwind.config = {
+      theme: {
+        screens: {
+      '2xl': {'max': '1535px'},
+      // => @media (max-width: 1535px) { ... }
+
+      'xl': {'max': '1279px'},
+      // => @media (max-width: 1279px) { ... }
+
+      'lg': {'max': '1100px'},
+      // => @media (max-width: 1023px) { ... }
+
+      'md': {'max': '767px'},
+      // => @media (max-width: 767px) { ... }
+
+      'sm': {'max': '639px'},
+      // => @media (max-width: 639px) { ... }
+    },
+        extend: {
+
+            screens:{
+                'small' :'300px',
+                'medium' : '600px',
+                'large'  :'900px',
+
+            },
+
+     
+          colors: {
+            clifford: '#da373d',
+            bilal :'rgb(1222,245,154)',
+            khan : 'green',
+                                                  },
+
+          keyframes:{
+            colorChange:{
+              '0%' : {backgroundColor : 'red'},
+              '25%': {backgroundColor  : 'green'},
+              '50%': {backgroundColor  : 'blue'},
+              '100%' : {backgroundColor : 'yellow'}
+
+            },
+
+            textChange:{
+              '0%':{fontSize :'20px'},
+              '25%':{fontSize : '10px'},
+              '50%':{fontSize : '5px'},
+              '100%': {fontSize : '30px'}
+            },
+
+          },
+
+          animation:{
+           ' color-change':'colorChange 1s linear infinite'
+      
+          }
+        }
+      }
+    }
+    </script>
+    <style type="text/tailwindcss">
+    @layer utilities{
+      .main{
+        background-color: red;
+        border: 1px solid yellow;
+      }
+
+    }
+
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container text-center small:text-bilal medium:text-khan animate-[colorChange_1s_linear_infinite] ">
+        hellow
+    </div> -->
+    <!-- 
+    <div class="container text-center text-bilal bg-khan p-5 ">
+      <div class="container bg-clifford [5px_10px] group-hover:bg-[hotpink]">
+        HELLOW WORLD
+      </div>
+    </div> -->
+
+    <div class="container-fluid bg-[hotpink] p-[20px_25px] text-white text-center">
+      <ul class="main" >
+        <li>Hellow 1</li>
+        <li>Hellow 2</li>
+        <li>Hellow 3</li>
+        <li>Hellow 4</li>
+        <li>Hellow 5</li>
+        <li>Hellow 6</li>
+      </ul>
+    </div>
+
+  </body>
+</html>
